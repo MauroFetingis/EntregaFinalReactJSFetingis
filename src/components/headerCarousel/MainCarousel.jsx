@@ -9,7 +9,7 @@ import { responsiveFontSizes } from '@mui/material';
 const MainCarousel = () => {
 
     
-    const items = mainCarouselDatos.map((item)=> <img className='cursor-pointer' role='presentation' src={item.image} alt=""/>)
+    const items = mainCarouselDatos.map((item)=> <img className='cursor-pointer ' role='presentation' src={item.image} alt=""/>)
 
     return (
     
