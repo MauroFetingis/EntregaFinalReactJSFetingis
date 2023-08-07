@@ -1,6 +1,6 @@
 import React from 'react'
 import MainCarousel from '../../headerCarousel/MainCarousel'
-
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 const Home = () => {
   return (
     <div>
