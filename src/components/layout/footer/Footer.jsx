@@ -24,8 +24,8 @@ const Footer = () => {
           </Column>
           <Column>
             <Heading>Consultas frecuentes</Heading>
-            <FooterLink href="/faq">Blog de consultas</FooterLink>
-            <FooterLink href="#">Etc</FooterLink>
+            <FooterLink href="/about">Blog de consultas</FooterLink>
+            <FooterLink href="/about">Etc</FooterLink>
           </Column>
           <Column>
             <Heading>Contactanos</Heading>

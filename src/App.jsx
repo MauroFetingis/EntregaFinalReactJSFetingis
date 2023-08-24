@@ -1,3 +1,4 @@
+import About from './components/pages/about/About'
 import Dashboard from './components/pages/admin/dashboard/Dashboard'
 import AllProductos from './components/pages/allProductos/AllProductos'
 import Cart from './components/pages/cart/Cart'
@@ -18,6 +19,7 @@ function App() {
         <Route path="/orders"element={<Orders/>}/>
         <Route path="/cart"element={<Cart/>}/>
         <Route path="/all-productos"element={<AllProductos/>}/>
+        <Route path="/about"element={<About/>}/>
         <Route path="/*"element={<NoPage/>}/>
       </Routes>
     </Router>

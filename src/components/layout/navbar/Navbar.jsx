@@ -4,7 +4,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Outlet, Link } from "react-router-dom"
 
 const navigation = [
-  { name: 'Inicio', href: '/', current: true },
+  { name: 'Inicio', href: '/home', current: false },
   { name: 'Tienda', href: '/all-productos', current: false },
   { name: 'Carrito', href: '/cart', current: false },
   { name: 'Ayuda', href: '/ayuda', current: false },
@@ -38,7 +38,7 @@ export default function Navbar() {
                   <img
                     className="h-16 w-28"
                     src="./img/Logo.png"
-                    alt="/"
+                    alt="/home"
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
