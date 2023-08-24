@@ -1,4 +1,6 @@
+import { Button } from "@mui/material"
 import Layout from "../../layout/Layout"
+import React,{ useState } from "react"
 
 const products = [
   {
@@ -101,30 +103,84 @@ const products = [
     stock: 5,
     img: "./img/appletv.jpg"
     },
+    {
+    id: 11,
+    href:"*",
+    nombre: "Samsung Galaxy Book",
+    categoria: "Computadoras portátiles",
+    price: 1200,
+    descripcion: "El Samsung Galaxy Book es la combinación perfecta de portabilidad y productividad. Con su diseño delgado y ligero, es ideal para trabajar sobre la marcha. La pantalla nítida y las características inteligentes hacen que este dispositivo sea una elección inteligente para profesionales y estudiantes que buscan versatilidad y estilo",
+    stock: 5,
+    img: "./img/laptop.png"
+    },
+    {
+    id: 12,
+    href:"*",
+    nombre: "Samsung Galaxy Book pro",
+    categoria: "Computadoras portátiles",
+    price: 1400,
+    descripcion: "El Samsung Galaxy Book Pro lleva la computación móvil al siguiente nivel. Este portátil ultrafino y ultraligero es perfecto para aquellos que buscan la máxima potencia y movilidad. Con una pantalla impresionante y un rendimiento de primer nivel, es la elección definitiva para quienes desean destacar en su trabajo o entretenimiento",
+    stock: 5,
+    img: "./img/laptop3.png"
+    },
+    {
+    id: 13,
+    href:"*",
+    nombre: "MSI Gaming laptop",
+    categoria: "Computadoras portátiles",
+    price: 1600,
+    descripcion: "Sumérgete en el mundo del gaming con el MSI Gaming Laptop. Este portátil potente y elegante está diseñado para ofrecer un rendimiento excepcional en tus juegos favoritos. Con gráficos de alta gama y un procesador rápido, te llevará a un nivel superior de entretenimiento interactivo.",
+    stock: 5,
+    img: "./img/laptop2.jpg"
+    },
+    {
+    id: 14,
+    href:"*",
+    nombre: "Iphone 13 pro",
+    categoria: "Celulares",
+    price: 1100,
+    descripcion: "El iPhone 13 Pro es la joya de la corona de Apple. Con su cámara de última generación, pantalla ProMotion y un rendimiento excepcional, este teléfono es perfecto para los amantes de la fotografía y los usuarios que buscan un dispositivo de alta gama. Experimenta la innovación y el estilo en su máxima expresión con el iPhone 13 Pro.",
+    stock: 5,
+    img: "./img/iphone2.jpg"
+    },
 
 ]
 
 export default function AllProductos() {
+  const [count, setCount] = React.useState(1)
   return ( <Layout>
 
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 className="sr-only">Nuestros productos</h2>
 
-        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 cursor-pointer">
           {products.map((product) => (
-            <a key={product.id} href={product.href} className="group">
-              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <div key={product.id} href={product.href} className="group">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 ">
                 <img
                   src={product.img}
                   alt={product.descripcion}
-                  className="h-full w-full object-cover object-center group-hover:opacity-75"
+                  className="prod h-full w-full object-cover object-center  mix-blend-multiply"
                 />
               </div>
-              <h3 className="mt-4 text-sm text-gray-700">{product.nombre}</h3>
+              <h3 className="flex justify-center content-center mt-4 text-lg text-gray-700">{product.nombre}</h3>
               <h3 className="mt-4 text-sm text-gray-700">{product.descripcion}</h3>
-              <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
-            </a>
+              <p className="flex justify-center content-center mt-1 text-lg font-medium text-gray-900">{product.price}$</p>
+            
+              <div className="flex justify-between">
+                <Button onClick={() => {
+              setCount(Math.max(count - 1, 0));
+            }} size="large" variant="contained" color="error" >-</Button>
+                <div className="flex justify-center content-center">
+              <Button size="large" >Añadir al carrito</Button>
+            </div>
+                <Button onClick={() => {
+              setCount(count + 1);
+            }} size="large" variant="contained" color="success">+</Button>
+                
+              </div>
+            </div>
           ))}
         </div>
       </div>

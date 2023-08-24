@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <Layout>
         <header>
-        <h1 className='flex justify-center font-bold text-3xl font-bruno p-7 text-gray-950'>Bienvenido a la tienda</h1>
+        <h1 className='h1_home flex justify-center font-bold text-3xl font-bruno p-7 text-gray-950 animate-pulse'>Bienvenido a la tienda</h1>
         <div>
         <MainCarousel/>
         </div>
