@@ -7,7 +7,7 @@ const navigation = [
   { name: 'Inicio', href: '/home', current: false },
   { name: 'Tienda', href: '/all-productos', current: false },
   { name: 'Carrito', href: '/cart', current: false },
-  { name: 'Ayuda', href: '/ayuda', current: false },
+  { name: 'Ayuda', href: '/help', current: false },
 ]
 
 function classNames(...classes) {
@@ -118,7 +118,7 @@ export default function Navbar() {
                             href="*"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Sign out
+                            Cerrar sesión
                           </a>
                         )}
                       </Menu.Item>
