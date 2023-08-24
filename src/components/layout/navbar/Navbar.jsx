@@ -1,9 +1,9 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useContext, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Outlet, Link } from "react-router-dom"
 import { Badge } from '@mui/material'
-
+import MyContext from '../../../context/data/MyContext'
 
 const navigation = [
   { name: 'Inicio', href: '/home', current: false },
@@ -18,6 +18,10 @@ function classNames(...classes) {
 
 
 export default function Navbar() {
+  // const [open, setOpen] = useState(false);
+
+  // const context = useContext(MyContext);
+  // const { toggleMode, mode } = context;
 
   return (
     <Disclosure as="nav" className="bg-gray-800 ">
@@ -65,6 +69,16 @@ export default function Navbar() {
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 {/*button*/}
+                {/* <div className="flex lg:ml-6"> */}
+                  {/* <button className='' onClick={toggleMode}> */}
+                    {/* <MdDarkMode size={35} style={{ color: mode === 'dark' ? 'white' : '' }} /> */}
+                    {/* {mode === 'light' ? */}
+                      {/* (<FiSun className='' size={30} /> */}
+                      {/* ) : 'dark' ? */}
+                        {/* (<BsFillCloudSunFill size={30} /> */}
+                        {/* ) : ''} */}
+                  {/* </button> */}
+                {/* </div> */}
                 <Badge badgeContent={1} color="primary">
 
                 <button
@@ -160,3 +174,6 @@ export default function Navbar() {
     </Disclosure>
   )
 }
+
+
+

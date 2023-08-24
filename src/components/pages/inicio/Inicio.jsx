@@ -19,7 +19,7 @@ const Inicio = () => {
         <section id='in' className='hidd '>
           <h2 className='in text-3xl'>Podras encontrar desde</h2>
           <p className='in text-3xl'>los últimos celulares</p>
-          <div className='photo'>
+          <div className='photo h-5/6'>
             <div className='photo hidd'>
             <img className='in' src="./img/iphone.jpg" alt="" />
             </div>
